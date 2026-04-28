@@ -913,7 +913,7 @@ def get_youtube_links(message):
 DISCIPLINES = {
 
     "Bodybuilding": {
-        "note": "Bodybuilding is about building muscle size through volume, progressive overload, and the mind-muscle connection. Every rep should be felt in the target muscle — not just moved.",
+        "note": "Build size through volume, progressive overload, and mind-muscle connection. Feel every rep — don't just move weight.",
         "source": "Based on Jeff Nippard — Pure Bodybuilding Program Phase 2 (Upper/Lower Split)",
         "focus_days": {
             # Jeff Nippard Upper/Lower split
@@ -970,15 +970,15 @@ DISCIPLINES = {
             "Dinner": "Salmon + sweet potato + green beans + butter"
         },
         "tips": [
-            "Control the eccentric (lowering) phase — take 2-3 seconds to lower the weight. The muscle damage from this phase drives more growth than the lifting phase.",
-            "Train each muscle group twice per week for optimal hypertrophy (Jeff Nippard). This Upper/Lower split achieves this automatically — chest on Day 1 and Day 3.",
-            "Progressive overload in bodybuilding: add reps first, then weight. Once you hit the top of your rep range on all sets, add 2.5-5kg and start again.",
-            "Track your measurements monthly — chest, arms, legs, waist. The scale is misleading. Measurements and photos tell you if the program is actually working."
+            "Control the lowering phase — 2-3 seconds down. This drives more growth than the lift itself.",
+            "Train each muscle group twice per week. This Upper/Lower split does it automatically.",
+            "Add reps first, then weight. Once you hit the top of your rep range, add 2.5-5kg.",
+            "Track measurements monthly — chest, arms, legs, waist. Photos and tape beat the scale."
         ]
     },
 
     "Body Recomposition": {
-        "note": "Body recomposition — losing fat and building muscle simultaneously — requires maintenance calories, very high protein, and a combination of heavy compound work with cardio.",
+        "note": "Lose fat and build muscle at the same time. Requires maintenance calories, high protein, and a mix of heavy compound work and cardio.",
         "source": "Based on Jeff Nippard recomposition principles — Pure Bodybuilding Nutrition Booklet",
         "focus_days": {
             1: ("Upper Body Strength", [
@@ -1023,15 +1023,15 @@ DISCIPLINES = {
             "Dinner": "White fish + sweet potato + asparagus + lemon"
         },
         "tips": [
-            "Protein is the single most important variable for recomposition. At 2.5g per kg of bodyweight, your body has everything it needs to build muscle even in a slight deficit.",
-            "Carb cycle — eat more carbs on training days (around workouts) and fewer carbs on rest days. Training day: slight surplus. Rest day: slight deficit.",
-            "Do not chase the scale. Recomposition is slow — the scale may barely move for months. Monthly photos and measurements are the only reliable progress metric.",
-            "Prioritise sleep. Growth hormone is released during deep sleep — this is when fat is mobilised and muscle is repaired and built. 8 hours is the target."
+            "Hit 2.5g protein per kg bodyweight. That's what drives muscle gain even at maintenance calories.",
+            "Carb cycle — more carbs on training days, fewer on rest days.",
+            "Don't chase the scale — it barely moves during recomp. Track photos and measurements monthly.",
+            "Prioritise 8 hours of sleep. Fat is mobilised and muscle is repaired during deep sleep."
         ]
     },
 
     "Lose Weight": {
-        "note": "Fat loss requires a consistent caloric deficit combined with resistance training to preserve muscle. Cardio accelerates the process and improves cardiovascular health.",
+        "note": "Consistent caloric deficit plus resistance training to preserve muscle. Cardio accelerates fat loss.",
         "source": "Based on Jeff Nippard fat loss principles — 5-15% caloric deficit recommended",
         "focus_days": {
             1: ("Full Body Resistance", [
@@ -1074,15 +1074,15 @@ DISCIPLINES = {
             "Dinner": "Steamed white fish + large portion vegetables + small rice portion"
         },
         "tips": [
-            "Track everything you eat for the first 4 weeks. Most people underestimate their intake by 20-30%. Use MyFitnessPal or Cronometer and weigh your food with a scale.",
-            "A 10% caloric deficit is sustainable. A 25% deficit feels faster but causes muscle loss, hunger, and rebound weight gain. Slow and steady wins every time.",
-            "Do not cut carbs entirely — reduce them. Carbs fuel your resistance training sessions. Without them, training quality drops and you burn less overall calories.",
-            "Weigh yourself daily and take the weekly average. Daily weight fluctuates 1-3kg due to water, food, and hormones. The 7-day average shows real fat loss progress."
+            "Track everything for the first 4 weeks — most people underestimate intake by 20-30%. Weigh your food.",
+            "Keep the deficit to 10%. Aggressive cuts cause muscle loss and rebound weight gain.",
+            "Don't cut carbs — reduce them. They fuel training. Without them, intensity drops.",
+            "Weigh daily and use the weekly average. Daily fluctuations of 1-3kg are normal."
         ]
     },
 
     "Improve Endurance": {
-        "note": "Endurance training builds your aerobic base, increases stamina, and improves cardiovascular health. Consistency and gradual progression matter more than intensity.",
+        "note": "Build your aerobic base gradually. Consistency and progressive pacing matter more than intensity.",
         "source": "Based on Norwegian 4×4 intervals, Zone 2 training, and periodization principles",
         "focus_days": {
             1: ("Zone 2 Base Run", [
@@ -1120,15 +1120,15 @@ DISCIPLINES = {
             "Recovery meal": "Pasta + lean mince + tomato sauce + parmesan within 30 min"
         },
         "tips": [
-            "Build distance by no more than 10% per week. Most endurance injuries come from doing too much too soon. Patience in month 1 pays off in month 6.",
-            "80% of your runs should feel easy — conversational pace, Zone 2. Most beginners run everything too hard. Easy days build your aerobic base.",
-            "Carbohydrates are not optional — they are your fuel. On long training days you need 6-8g of carbs per kg of bodyweight. Do not restrict them.",
-            "Strength train twice a week. Strong legs, glutes, and core prevent injury and improve running economy significantly. Do not skip strength sessions."
+            "Build distance by no more than 10% per week. Most injuries come from doing too much too soon.",
+            "80% of runs should feel easy — conversational pace. Most people run too hard.",
+            "Carbs are fuel — 6-8g per kg on long training days. Don't restrict them.",
+            "Strength train twice a week. Strong legs and core prevent injury and improve economy."
         ]
     },
 
     "Maintain Fitness": {
-        "note": "Maintenance is about sustainability. The best program is the one you can stick to for years. Balance and consistency beat short-term intensity every single time.",
+        "note": "Sustainability over intensity. The best program is the one you stick to for years.",
         "source": "Based on general fitness principles and auto-regulated training",
         "focus_days": {
             1: ("Full Body Strength", [
@@ -1168,10 +1168,10 @@ DISCIPLINES = {
             "Dinner": "Protein + vegetable + carb of your choice — enjoy your food"
         },
         "tips": [
-            "Consistency over perfection. Showing up 3 days every week for 5 years beats 6 days a week for 3 months then quitting. The habit is worth more than the program.",
-            "Find movement you actually enjoy. If you hate running, stop. Walk, swim, cycle, play a sport. Activity you enjoy is activity you will sustain.",
-            "Maintenance calories are not a restriction. You are fuelling an active lifestyle. Eat enough protein and do not feel guilty about your food choices.",
-            "Even at maintenance, chase small improvements. Add a rep, add a kilo, improve your form. Progress does not require a major goal — it keeps training engaging."
+            "Consistency beats intensity. 3 days a week for 5 years beats 6 days for 3 months.",
+            "Find movement you enjoy. You'll only sustain what you don't dread.",
+            "Maintenance calories aren't a restriction — they fuel an active lifestyle. Eat enough protein.",
+            "Chase small improvements even at maintenance. Add a rep, a kilo, or better form."
         ]
     }
 }
@@ -1194,7 +1194,6 @@ def load_local_model():
     return model, tokenizer
 
 def md_to_html(text):
-    import re
     text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
     text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
     lines = text.split('\n')
@@ -1243,7 +1242,7 @@ st.markdown("""
     </div>
     <div class="nav-status">
         <div class="status-dot"></div>
-        AI Trainer Online
+        Online
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -1257,8 +1256,8 @@ with tab1:
     st.markdown("""
     <div class="hero">
         <div class="hero-eyebrow">Discipline-specific · Science-backed</div>
-        <h1 class="hero-title">A plan built around <em>how</em> you actually train.</h1>
-        <p class="hero-body">Choose your discipline, share your stats, and get a structured weekly schedule with real exercises, personalized macros, and meal plans — calculated for your specific body and goals.</p>
+        <h1 class="hero-title">Built around <em>how</em> you train.</h1>
+        <p class="hero-body">Pick your discipline, enter your stats — get a weekly schedule, macros, and meal plan tailored to you.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -1352,7 +1351,7 @@ with tab1:
     <div class="trainer-note">
         <div class="note-label">About {discipline}</div>
         <div class="note-main">{disc_data['note']}</div>
-        <div class="note-sub">You will train {days} days per week as a {exp_map[experience]} with {gym_time} per session. Your estimated maintenance calories are {nutrition['maintenance']} kcal — your plan is calculated from this. {t_cfg['note']}</div>
+        <div class="note-sub">{days} days/week · {exp_map[experience]} · {gym_time} · {nutrition['maintenance']} kcal maintenance</div>
     </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1460,12 +1459,7 @@ with tab1:
 
         st.markdown("""
         <div class="adjust-banner">
-            <div class="adjust-banner-icon">AI</div>
-            <div>
-                <strong>This plan is your starting point.</strong> Every body responds differently to training.
-                Switch to <strong>Talk to my trainer</strong> to swap exercises, adjust rest periods,
-                or ask anything about your program.
-            </div>
+            <strong>Starting point.</strong> Switch to <strong>Talk to my trainer</strong> to swap exercises, adjust rest periods, or ask anything about your plan.
         </div>
         """, unsafe_allow_html=True)
 
@@ -1528,7 +1522,7 @@ with tab1:
                 <div class="macro-lbl">Maintenance</div>
             </div>
         </div>
-        <div class="macro-source">Adjust based on weekly weight trends.</div>
+        <div class="macro-source">Adjust based on weekly weight trends</div>
         """, unsafe_allow_html=True)
 
         # MEAL PLAN
@@ -1542,12 +1536,12 @@ with tab1:
         # TRACKING TIPS
         st.markdown("""
         <div class="tracking-grid" style="margin-top:14px;">
-            <div class="tracking-title">Meal tracking essentials</div>
+            <div class="tracking-title">Meal tracking</div>
             <div class="tracking-items">
-                <div class="tracking-item"><strong>Use MyFitnessPal or Cronometer</strong> — scan barcodes and log everything. Most people underestimate intake by 20-30% without tracking.</div>
-                <div class="tracking-item"><strong>Weigh your food</strong> — especially calorie-dense foods like oils, nuts, rice, and peanut butter. Eyeballing is consistently inaccurate.</div>
-                <div class="tracking-item"><strong>Meal prep on Sunday</strong> — cook proteins, grains, and vegetables in bulk. Removes daily decisions and keeps you consistent.</div>
-                <div class="tracking-item"><strong>Hit protein first</strong> — plan every meal around your protein target. Carbs and fats fit around it. Protein is the most important macro.</div>
+                <div class="tracking-item"><strong>MyFitnessPal or Cronometer</strong> — log everything. Most people underestimate intake by 20-30%.</div>
+                <div class="tracking-item"><strong>Weigh calorie-dense foods</strong> — oils, nuts, rice, peanut butter. Eyeballing is inaccurate.</div>
+                <div class="tracking-item"><strong>Meal prep on Sunday</strong> — bulk cook proteins, grains, vegetables. Removes daily decisions.</div>
+                <div class="tracking-item"><strong>Hit protein first</strong> — plan every meal around it. Carbs and fats fill the rest.</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -1555,30 +1549,30 @@ with tab1:
         # SUPPLEMENTS
         st.markdown("""
         <div class="supps-card">
-            <div class="tracking-title">Evidence-based supplements</div>
+            <div class="tracking-title">Supplements</div>
             <div class="supps-grid">
                 <div class="supp-item">
                     <span class="supp-name">Creatine Monohydrate</span>
-                    <span class="supp-dose">5g per day · any time</span>
-                    Most researched supplement. Improves strength and muscle gain. No loading phase needed.
+                    <span class="supp-dose">5g/day · any time</span>
+                    Most researched supplement. Improves strength and muscle gain. No loading needed.
                 </div>
                 <div class="supp-item">
                     <span class="supp-name">Protein Powder</span>
-                    <span class="supp-dose">As needed for protein target</span>
-                    Use whey (fastest absorbing) post-workout or to fill protein gaps in meals.
+                    <span class="supp-dose">As needed to hit protein target</span>
+                    Whey post-workout or to fill gaps. Food first.
                 </div>
                 <div class="supp-item">
                     <span class="supp-name">Caffeine</span>
                     <span class="supp-dose">150-250mg · 30-60 min pre-training</span>
-                    Improves performance and focus. Use sparingly — not every session.
+                    Improves performance and focus. Don't rely on it every session.
                 </div>
                 <div class="supp-item">
                     <span class="supp-name">Multivitamin</span>
-                    <span class="supp-dose">1 daily with a meal · optional</span>
-                    Insurance against deficiencies. Not needed with a varied diet.
+                    <span class="supp-dose">1 daily with food · optional</span>
+                    Insurance against gaps. Not needed with a varied diet.
                 </div>
             </div>
-            <div class="macro-source" style="margin-top:14px;margin-bottom:0;">Test boosters, fat burners, and BCAAs are not strongly supported by current evidence.</div>
+            <div class="macro-source" style="margin-top:14px;margin-bottom:0;">Test boosters, fat burners, and BCAAs lack strong evidence.</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -1593,7 +1587,7 @@ with tab1:
         st.markdown(tips_html + "</div></div></div>", unsafe_allow_html=True)
 
         # DOWNLOAD
-        plan_text = f"FitByMinh — {pd['discipline']} Plan\n{pd['source']}\n\n"
+        plan_text = f"FitByMinh — {pd['discipline']} Plan\n\n"
         plan_text += f"PERSONALIZED MACROS:\nCalories: {nut['calories']} kcal | Protein: {nut['protein_g']}g | Carbs: {nut['carb_g']}g | Fat: {nut['fat_g']}g\n\nWEEKLY SCHEDULE:\n"
         for day, data in pd["week"].items():
             if data["type"] == "training":
@@ -1617,7 +1611,7 @@ with tab2:
             <div class="empty-state">
                 <div class="empty-icon">01</div>
                 <div class="empty-title">No plan yet</div>
-                <div class="empty-body">Generate your plan first in the Build my plan tab, then come back here to talk to your AI trainer.</div>
+                <div class="empty-body">Generate your plan first, then come back here.</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -1628,9 +1622,8 @@ with tab2:
             <div class="chat-header">
                 <div class="chat-title">
                     {discipline} Trainer
-                    <span class="chat-badge">AI Coach</span>
                 </div>
-                <div class="chat-sub">Ask about technique, swap exercises, adjust rest periods, dial in nutrition, or anything else about your training. Tutorial videos appear automatically when relevant.</div>
+                <div class="chat-sub">Ask anything about your plan — technique, exercises, nutrition, rest. Tutorial videos appear automatically when relevant.</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -1691,7 +1684,7 @@ with tab2:
             <div class="empty-state" style="margin-top:8px;">
                 <div class="empty-icon">→</div>
                 <div class="empty-title">Start the conversation</div>
-                <div class="empty-body">Use the quick questions above or type your own. Ask about technique, swapping exercises, adjusting rest periods, or anything about your plan.</div>
+                <div class="empty-body">Use the quick questions above or type your own.</div>
             </div>
             """, unsafe_allow_html=True)
         else:
@@ -1712,7 +1705,7 @@ with tab2:
 
         st.markdown('</div>', unsafe_allow_html=True)
 
-        user_msg = st.chat_input("Ask about technique, adjusting your plan, nutrition, or anything else...")
+        user_msg = st.chat_input("Ask about your plan, technique, or nutrition...")
         if user_msg:
             st.session_state.chat_history.append({"role": "user", "content": user_msg})
 
@@ -1731,7 +1724,7 @@ User profile: {st.session_state.user_profile}"""
             history_window = st.session_state.chat_history[-6:]
             api_messages = [{"role": m["role"], "content": m["content"]} for m in history_window]
 
-            with st.spinner("Your trainer is thinking..."):
+            with st.spinner("Thinking..."):
                 local_model, local_tokenizer = load_local_model()
                 if local_model is not None:
                     try:
