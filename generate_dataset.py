@@ -4,9 +4,6 @@ import random
 import os
 import time
 
-# ===========================
-# VARIABLES TO RANDOMIZE
-# ===========================
 genders = ["Male", "Female"]
 ages = list(range(16, 60))
 weights = list(range(45, 130))
@@ -46,9 +43,6 @@ allergies = [
     "soy allergy"
 ]
 
-# ===========================
-# FUNCTIONS
-# ===========================
 def generate_random_person():
     weight = random.choice(weights)
     height = random.choice(heights)
@@ -82,7 +76,6 @@ Days available per week: {person['days_per_week']}"""
 
 def generate_plan(person):
     prompt = create_prompt(person)
-
     response = requests.post(
         "http://localhost:11434/api/generate",
         json={
@@ -109,47 +102,33 @@ IMPORTANT NOTES:
         },
         timeout=120
     )
-
     return response.json()["response"]
 
-# ===========================
-# GENERATE DATASET
-# ===========================
 output_file = "gym_dataset.jsonl"
 total_examples = 3000
 already_done = 0
 
-# Resume if interrupted
 if os.path.exists(output_file):
     with open(output_file, 'r') as f:
         already_done = sum(1 for _ in f)
-    print(f"Resuming from example {already_done}")
+    print(f"Resuming from {already_done}/{total_examples}")
 
 print(f"Generating {total_examples - already_done} examples...")
-print("This will take a while — Llama is working hard! ")
-print("You can close and reopen anytime — it auto resumes!\n")
 
 with open(output_file, 'a', encoding='utf-8') as f:
     for i in range(already_done, total_examples):
         try:
             person = generate_random_person()
-            print(f"Generating {i+1}/{total_examples} — {person['gender']}, {person['age']}yo, goal: {person['goal']}...")
-
+            print(f"[{i+1}/{total_examples}] {person['gender']}, {person['age']}yo — {person['goal']}")
             plan = generate_plan(person)
-
             example = {
                 "input": create_prompt(person).strip(),
                 "output": plan.strip()
             }
-
             f.write(json.dumps(example) + '\n')
             f.flush()
-
-            print(f"Done!\n")
-
         except Exception as e:
-            print(f"Error: {e} — skipping...\n")
+            print(f"Error: {e} — skipping")
             time.sleep(2)
-            continue
 
-print(f"Dataset complete! {total_examples} examples saved to {output_file}")
+print(f"Done. {total_examples} examples saved to {output_file}")

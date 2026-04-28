@@ -9,9 +9,6 @@ from peft import LoraConfig, get_peft_model
 
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 
-# ===========================
-# SETUP
-# ===========================
 print(f"GPU: {torch.cuda.get_device_name(0)}")
 print(f"VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f}GB")
 torch.cuda.empty_cache()
@@ -19,9 +16,6 @@ gc.collect()
 
 MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
 
-# ===========================
-# LOAD MODEL
-# ===========================
 print("Loading Mistral-7B...")
 
 bnb_config = BitsAndBytesConfig(
@@ -42,13 +36,8 @@ model = AutoModelForCausalLM.from_pretrained(
     trust_remote_code=True
 )
 
-print("Model loaded!")
-
-# ===========================
-# ADD LORA
-# ===========================
 print("Adding LoRA...")
- 
+
 lora_config = LoraConfig(
     r=64,
     lora_alpha=128,
@@ -61,9 +50,6 @@ lora_config = LoraConfig(
 model = get_peft_model(model, lora_config)
 model.print_trainable_parameters()
 
-# ===========================
-# LOAD DATASET
-# ===========================
 print("Loading dataset...")
 
 SYSTEM_PROMPT = "You are an expert personal trainer and nutritionist. Give specific, practical, science-based advice."
@@ -83,17 +69,14 @@ with open("gym_dataset.jsonl", "r", encoding="utf-8") as f:
         except:
             continue
 
-print(f"Loaded {len(examples)} examples!")
+print(f"{len(examples)} examples loaded")
 
 split = int(len(examples) * 0.9)
 train_data = Dataset.from_list(examples[:split])
 test_data  = Dataset.from_list(examples[split:])
 print(f"Train: {len(train_data)} | Test: {len(test_data)}")
 
-# ===========================
-# TRAIN
-# ===========================
-print("Training on RTX 5070 Ti...")
+print("Training...")
 
 torch.cuda.empty_cache()
 gc.collect()
@@ -105,7 +88,7 @@ training_args = TrainingArguments(
     gradient_accumulation_steps=4,
     learning_rate=1e-4,
     fp16=False,
-    bf16=True,          # bfloat16 — RTX 5070 Ti supports it, faster + more stable
+    bf16=True,
     logging_steps=10,
     save_steps=200,
     save_total_limit=2,
@@ -128,19 +111,12 @@ trainer = SFTTrainer(
 
 trainer.train()
 
-# ===========================
-# SAVE
-# ===========================
 print("Saving model...")
 model.save_pretrained("gym_ai_model")
 tokenizer.save_pretrained("gym_ai_model")
 print("Saved to gym_ai_model/")
 
-# ===========================
-# TEST
-# ===========================
 print("Testing...")
-
 torch.cuda.empty_cache()
 
 test_messages = [
@@ -164,9 +140,7 @@ with torch.no_grad():
     )
 
 response = tokenizer.decode(outputs[0][input_ids.shape[-1]:], skip_special_tokens=True)
-
 print("\n" + "="*50)
-print("TEST OUTPUT:")
-print("="*50)
 print(response)
-print("Fine-tuning complete!")
+print("="*50)
+print("Done.")
