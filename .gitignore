@@ -1,0 +1,15 @@
+# Model weights — too large for GitHub (324MB). Run train_model.py to generate.
+gym_ai_model/
+
+# Training checkpoints
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# OS
+.DS_Store
+Thumbs.db
